@@ -19,6 +19,7 @@ namespace GarysWholesaleGarage
         {
             Console.WriteLine($"The vehicle comes to a stop.");
         }
+
     }
 }
 

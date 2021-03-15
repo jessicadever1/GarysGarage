@@ -3,16 +3,15 @@ using System;
 namespace GarysWholesaleGarage
 
 {
-    public class Zero : Vehicle // Electric motorcycle
+    public class Zero : Vehicle, IElectric // Electric motorcycle
     {
         public double BatteryKWh { get; set; }
+        public int CurrentChargePercentage { get; set; }
+
         public void ChargeBattery()
         {
             // method definition omitted
-        }
-        public Zero(string paint)
-        {
-            MainColor = paint;
+            CurrentChargePercentage = 100;
         }
         public override void Drive()
         {
