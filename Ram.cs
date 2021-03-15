@@ -11,6 +11,14 @@ namespace GarysWholesaleGarage
         {
             // method definition omitted
         }
+        public override void Drive()
+        {
+            Console.WriteLine($"The {MainColor} Ram drives past. Grunt.");
+        }
+        public override void Turn(string direction)
+        {
+            Console.WriteLine($"Do something, but then turn {direction}");
+        }
     }
 }
 
