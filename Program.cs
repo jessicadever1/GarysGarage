@@ -39,28 +39,31 @@ namespace GarysWholesaleGarage
             /***********************************************/
 
             Ram ram = new Ram();
+            ram.CurrentTankPercentage = 34;
             Cessna cessna150 = new Cessna();
+            cessna150.CurrentTankPercentage = 65;
 
-            List <???> gasVehicles = new List<???> () {
+            List<IGas> gasVehicles = new List<IGas>() {
                 ram, cessna150
               };
 
             Console.WriteLine("Gas Vehicles");
-            foreach (??? gv in gasVehicles)
+            foreach (IGas gv in gasVehicles)
             {
-                Console.WriteLine($"{gv.CurrentTankPercentage}");
+                Console.WriteLine($"{gv.CurrentTankPercentage} %");
             }
 
-            // foreach (??? gv in gasVehicles)
-            // {
-            //     // This should completely refuel the gas tank
-            //     gv.RefuelTank();
-            // }
+            foreach (IGas gv in gasVehicles)
+            {
+                // This should completely refuel the gas tank
+                gv.RefuelTank();
+                Console.WriteLine("*R E F U E L I N G*");
+            }
 
-            // foreach (??? gv in gasVehicles)
-            // {
-            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
-            // }
+            foreach (IGas gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage} %");
+            }
         }
     }
 }
